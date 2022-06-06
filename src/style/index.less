@@ -24,6 +24,7 @@ body{
 .wrapper {
   width: 100%;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 .header {
@@ -232,6 +233,86 @@ body{
       img{
         width: 100%;
         margin-right: 10%;
+      }
+    }
+  }
+}
+
+
+.shoppingCart{
+  width: 60%;
+  margin: 100px auto;
+  background-color: @white;
+  padding: 25px;
+  h2{
+    font-weight: 400;
+    font-size: 32px;
+    color: @textColor;
+    padding-top: 50px;
+    text-align: center;
+  }
+  &-item{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid @ligthColor;
+    border-bottom: 1px solid @ligthColor;
+    margin-top: 20px;
+    p{
+      font-weight: 400;
+      font-size: 24px;
+      color: @textColor;
+      width: 5%;
+    }
+    span{
+      font-weight: 400;
+      font-size: 24px;
+      color: @textColor;
+      width: 50%;
+    }
+    img{
+      padding-left: 10px;
+      width: 10%;
+    }
+  }
+  input{
+    margin-top: 50px;
+    margin-left: 20px;
+    padding: 6px 30px;
+    border: 1px solid #485C5C;
+    border-radius: 2px;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: @ligthColor;
+    &::placeholder{
+      font-weight: 400;
+      font-size: 16px;
+      color: @ligthColor;
+    }
+  }
+  &-out{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    span{
+      display: block;
+      font-weight: 400;
+      font-size: 24px;
+      color: @textColor;
+    }
+    button{
+      background-color: @buttonColor;
+      padding: 8px 15px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      border: none;
+      font-weight: 400;
+      font-size: 14px;
+      color: @white;
+      transition: background-color 0.5s ease;
+      &:hover{
+        background-color: @ligthColor;
       }
     }
   }

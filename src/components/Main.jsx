@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import Slide from "./Slide";
 
 function Main(props) {
     const settings = {
@@ -55,34 +56,9 @@ function Main(props) {
                 </div>
                 <div className="products-slider">
                     <Slider {...settings}>
-                        <div className="slider-item">
-                            <div className="products-info">
-                                <span>Осенний букет с яблоками, лимоном и ягодами</span>
-                                <p>В букет входит: тут мы описываем что входит точный состав и тря ляляляля ля ля ля ут мы описываем что входит точный состав и тря ляляляля ля ля ля</p>
-                                <img src="./img/stars.png" alt=""/>
-                                <div className="products-info-button">
-                                    <button>ЗАКАЗАТЬ</button>
-                                    <span>1050 РУБ</span>
-                                </div>
-                            </div>
-                            <div className="products-info-photo">
-                                <img src="./img/products.png" alt=""/>
-                            </div>
-                        </div>
-                        <div className="slider-item">
-                            <div className="products-info">
-                                <span>Осенний букет с яблоками, лимоном и ягодами</span>
-                                <p>В букет входит: тут мы описываем что входит точный состав и тря ляляляля ля ля ля ут мы описываем что входит точный состав и тря ляляляля ля ля ля</p>
-                                <img src="./img/stars.png" alt=""/>
-                                <div className="products-info-button">
-                                    <button>ЗАКАЗАТЬ</button>
-                                    <span>1050 РУБ</span>
-                                </div>
-                            </div>
-                            <div className="products-info-photo">
-                                <img src="./img/products.png" alt=""/>
-                            </div>
-                        </div>
+                        {props.products.map(el => (
+                            <Slide buttonText={props.buttonText} addToCart={props.addToCart} key={el.id} slide={el} />
+                        ))}
                     </Slider>
                 </div>
             </section>

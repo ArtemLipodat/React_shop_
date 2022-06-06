@@ -1,0 +1,256 @@
+@textColor: #253030;
+@ligthColor: #B2B2B2;
+@buttonColor: #7DB8C2;
+@white: #F6F6F6;
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Forum', cursive;
+  background: url("/src/bg.png") repeat-y;
+  background-size: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  justify-content: space-around;
+  &-logo{
+    flex-basis: 30%;
+  }
+  &-menu{
+    flex-basis: 30%;
+    ul{
+      list-style: none;
+      li{
+        float: left;
+        margin-left: 8%;
+        img{
+          margin-left: 5px;
+          cursor: pointer;
+          transition: transform 0.5s ease;
+          &:hover{
+            transform: scale(1.2);
+          }
+        }
+        a{
+          text-decoration: none;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 40px;
+          color: @textColor;
+          transition: color 0.5s ease;
+          &:hover{
+            color: @ligthColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.main{
+  padding: 0 50px;
+}
+
+.performance{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 120px;
+  padding-bottom: 240px;
+  &-title{
+    h2{
+      font-weight: 400;
+      font-size: 75px;
+      color: @textColor;
+    }
+    h3{
+      font-weight: 400;
+      font-size: 48px;
+      color: @textColor;
+    }
+    button{
+      margin-top: 55px;
+      background-color: @buttonColor;
+      padding: 28px 120px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      border: none;
+      font-weight: 400;
+      font-size: 36px;
+      color: @white;
+      transition: background-color 0.5s ease;
+      &:hover{
+        background-color: @ligthColor;
+      }
+    }
+  }
+  &-info{
+    ul{
+      list-style-type: '> ';
+      li{
+        font-weight: 400;
+        font-size: 32px;
+        color: @textColor;
+      }
+    }
+  }
+}
+
+.info{
+  padding-bottom: 200px;
+  h2{
+    margin-top: 130px;
+    font-weight: 400;
+    font-size: 48px;
+    color: @textColor;
+    text-align: center;
+  }
+  &-text{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  &-text-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-top: 130px;
+    p{
+      display: inline-block;
+      font-weight: 400;
+      font-size: 120px;
+      line-height: 132px;
+      color: @textColor;
+    }
+    span{
+      font-weight: 400;
+      font-size: 24px;
+      width: 70%;
+    }
+  }
+}
+
+
+.slider-item{
+  display: flex !important;
+  align-items: center;
+}
+.products{
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 250px;
+  &-category{
+    margin-top: 110px;
+    a{
+      font-weight: 400;
+      font-size: 40px;
+      color: @textColor;
+      text-decoration: none;
+    }
+    span{
+      font-weight: 400;
+      font-size: 40px;
+      color: @textColor;
+      margin-top: 30px;
+      display: block;
+    }
+    .ligth{
+      color: @ligthColor;
+    }
+  }
+  &-slider{
+    margin-top: 30px;
+  }
+  &-info{
+    display: flex !important;
+    flex-direction: column;
+    min-height: 400px;
+    width: 50% !important;
+    background-color: @white;
+    padding-left: 50px;
+    span{
+      font-weight: 400;
+      font-size: 32px;
+      color: @textColor;
+      margin-top: 60px;
+      width: 100%;
+    }
+    p{
+      font-weight: 400;
+      font-size: 16px;
+      margin-top: 25px;
+      color: @textColor;
+      width: 100%;
+    }
+    img{
+      margin-top: 20px;
+      width: 120px;
+    }
+    &-button{
+      button{
+        margin-top: 40px;
+        background-color: @buttonColor;
+        padding: 18px 70px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        border: none;
+        font-weight: 400;
+        font-size: 20px;
+        color: @white;
+        transition: background-color 0.5s ease;
+        &:hover{
+          background-color: @ligthColor;
+        }
+      }
+      span{
+        padding-left: 20%;
+      }
+    }
+    &-photo{
+      width: 50%;
+      img{
+        width: 100%;
+        margin-right: 10%;
+      }
+    }
+  }
+}
+
+.footer{
+  height: 240px;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-icons{
+    img{
+      padding: 0 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.slick-prev:before, .slick-next:before{
+  color: @ligthColor;
+}

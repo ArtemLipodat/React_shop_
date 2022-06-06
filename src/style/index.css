@@ -1,0 +1,232 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Forum', cursive;
+  background: url("/src/bg.png") repeat-y;
+  background-size: 100%;
+}
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  justify-content: space-around;
+}
+.header-logo {
+  flex-basis: 30%;
+}
+.header-menu {
+  flex-basis: 30%;
+}
+.header-menu ul {
+  list-style: none;
+}
+.header-menu ul li {
+  float: left;
+  margin-left: 8%;
+}
+.header-menu ul li img {
+  margin-left: 5px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+.header-menu ul li img:hover {
+  transform: scale(1.2);
+}
+.header-menu ul li a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  color: #253030;
+  transition: color 0.5s ease;
+}
+.header-menu ul li a:hover {
+  color: #B2B2B2;
+}
+.main {
+  padding: 0 50px;
+}
+.performance {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 120px;
+  padding-bottom: 240px;
+}
+.performance-title h2 {
+  font-weight: 400;
+  font-size: 75px;
+  color: #253030;
+}
+.performance-title h3 {
+  font-weight: 400;
+  font-size: 48px;
+  color: #253030;
+}
+.performance-title button {
+  margin-top: 55px;
+  background-color: #7DB8C2;
+  padding: 28px 120px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: none;
+  font-weight: 400;
+  font-size: 36px;
+  color: #F6F6F6;
+  transition: background-color 0.5s ease;
+}
+.performance-title button:hover {
+  background-color: #B2B2B2;
+}
+.performance-info ul {
+  list-style-type: '> ';
+}
+.performance-info ul li {
+  font-weight: 400;
+  font-size: 32px;
+  color: #253030;
+}
+.info {
+  padding-bottom: 200px;
+}
+.info h2 {
+  margin-top: 130px;
+  font-weight: 400;
+  font-size: 48px;
+  color: #253030;
+  text-align: center;
+}
+.info-text {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.info-text-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-top: 130px;
+}
+.info-text-item p {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 120px;
+  line-height: 132px;
+  color: #253030;
+}
+.info-text-item span {
+  font-weight: 400;
+  font-size: 24px;
+  width: 70%;
+}
+.slider-item {
+  display: flex !important;
+  align-items: center;
+}
+.products {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 250px;
+}
+.products-category {
+  margin-top: 110px;
+}
+.products-category a {
+  font-weight: 400;
+  font-size: 40px;
+  color: #253030;
+  text-decoration: none;
+}
+.products-category span {
+  font-weight: 400;
+  font-size: 40px;
+  color: #253030;
+  margin-top: 30px;
+  display: block;
+}
+.products-category .ligth {
+  color: #B2B2B2;
+}
+.products-slider {
+  margin-top: 30px;
+}
+.products-info {
+  display: flex !important;
+  flex-direction: column;
+  min-height: 400px;
+  width: 50% !important;
+  background-color: #F6F6F6;
+  padding-left: 50px;
+}
+.products-info span {
+  font-weight: 400;
+  font-size: 32px;
+  color: #253030;
+  margin-top: 60px;
+  width: 100%;
+}
+.products-info p {
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 25px;
+  color: #253030;
+  width: 100%;
+}
+.products-info img {
+  margin-top: 20px;
+  width: 120px;
+}
+.products-info-button button {
+  margin-top: 40px;
+  background-color: #7DB8C2;
+  padding: 18px 70px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: none;
+  font-weight: 400;
+  font-size: 20px;
+  color: #F6F6F6;
+  transition: background-color 0.5s ease;
+}
+.products-info-button button:hover {
+  background-color: #B2B2B2;
+}
+.products-info-button span {
+  padding-left: 20%;
+}
+.products-info-photo {
+  width: 50%;
+}
+.products-info-photo img {
+  width: 100%;
+  margin-right: 10%;
+}
+.footer {
+  height: 240px;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-icons img {
+  padding: 0 10px;
+  cursor: pointer;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #B2B2B2;
+}
+/*# sourceMappingURL=index.css.map */

@@ -308,4 +308,19 @@ body {
 .slick-next:before {
   color: #B2B2B2;
 }
+.notifierContainer.info {
+  background-color: #7DB8C2 !important;
+}
+.notifierContainer {
+  margin-top: 50px !important;
+  margin-right: 50px !important;
+}
+.alert {
+  font-size: 18px;
+  font-weight: 400;
+  color: #F6F6F6;
+}
+.alert a {
+  color: #000;
+}
 /*# sourceMappingURL=index.css.map */

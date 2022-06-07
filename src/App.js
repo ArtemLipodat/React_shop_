@@ -4,13 +4,13 @@ import Footer from "./layout/Footer";
 import Main from "./components/Main";
 import Contact from "./components/Contact";
 import ShopCart from "./components/ShopCart";
-import {Routes, Route, Link} from "react-router-dom";
+import Alert from "kodobe-react-alert";
+import {Routes, Route} from "react-router-dom";
 
 class App extends React.Component{
 
     state = {
         buttonText : 'Добавить в корзину',
-        buttonClick : false,
         products: [
                 {
                     id: 1,
@@ -30,6 +30,17 @@ class App extends React.Component{
         order: []
     }
 
+    componentDidMount() {
+        if (localStorage.getItem('shoppingCart')) {
+            this.setState({order: JSON.parse(localStorage.getItem('shoppingCart'))})
+        }
+    }
+
+    alertInit = () => {
+        Alert.showInfo({
+            content: <div className="alert">Товар добавлен в корзину</div>
+        })
+    }
 
      addToCart = (item) => {
         let isInArray = false
@@ -37,17 +48,33 @@ class App extends React.Component{
             if (el.id === item.id)
             isInArray = true
         })
-         if (!isInArray)
+         if (!isInArray) {
+             if (JSON.parse(localStorage.getItem('shoppingCart')))
+                 JSON.parse(localStorage.getItem('shoppingCart')).forEach(el => {
+                     if (el.id === item.id) {
+                         isInArray = true
+                     }
+                 })
+         }
+         if (isInArray){
+             Alert.showInfo({
+                 content: <div className="alert">Товар уже корзине <a href='shopping_cart'>Перейти в корзину</a></div>
+             })
+         }
+         if (!isInArray) {
+             this.alertInit()
              this.setState({
                  order: [...this.state.order, item],
-                 buttonClick : true
+             }, () => {
+                 localStorage.setItem('shoppingCart', JSON.stringify(this.state.order))
              })
+         }
     }
 
     render() {
         return(
             <div className="wrapper">
-                <Header buttonClick={this.state.buttonClick} order={this.state.order} />
+                <Header order={this.state.order} />
                     <Routes>
                         <Route path="/" element={<Main addToCart={this.addToCart} buttonText={this.state.buttonText} products={this.state.products} />} />
                         <Route path="contacts" element={<Contact/>} />

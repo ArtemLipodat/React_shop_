@@ -2,15 +2,6 @@ import {Link} from "react-router-dom";
 
 function Header(props) {
 
-    const showAlert = (props) => {
-        if (props.buttonClick) {
-            return (
-                <div className="alert">
-                    Товар добавлен в корзину
-                </div>
-            )
-        }
-    }
 
     return(
       <header className="header">
@@ -24,7 +15,6 @@ function Header(props) {
                   <li><Link to="shopping_cart">Корзина</Link><img src="./img/shop.png" alt="Иконка корзицы"/></li>
               </ul>
           </div>
-          {showAlert(props)}
       </header>
     );
 }

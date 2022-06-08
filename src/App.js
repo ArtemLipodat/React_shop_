@@ -17,6 +17,7 @@ class App extends React.Component{
                     name: 'Осенний букет с яблоками, лимоном и ягодами',
                     image: 'products.png',
                     price : 1000,
+                    qty: 1,
                     description: 'В букет входит: тут мы описываем что входит точный состав и тря ляляляля ля ля ля ут мы описываем что входит точный состав и тря ляляляля ля ля ля'
                 },
                 {
@@ -24,10 +25,11 @@ class App extends React.Component{
                     name: 'Осенний букет с яблоками, лимоном и ягодами',
                     image: 'products.png',
                     price : 5000,
+                    qty: 1,
                     description: 'В букет входит: тут мы описываем что входит точный состав и тря ляляляля ля ля ля ут мы описываем что входит точный состав и тря ляляляля ля ля ля'
                 }
             ],
-        order: []
+        order: [],
     }
 
     componentDidMount() {
@@ -36,13 +38,7 @@ class App extends React.Component{
         }
     }
 
-    alertInit = () => {
-        Alert.showInfo({
-            content: <div className="alert">Товар добавлен в корзину</div>
-        })
-    }
-
-     addToCart = (item) => {
+    addToCart = (item) => {
         let isInArray = false
         this.state.order.forEach(el => {
             if (el.id === item.id)
@@ -62,13 +58,43 @@ class App extends React.Component{
              })
          }
          if (!isInArray) {
-             this.alertInit()
+             Alert.showInfo({
+                 content: <div className="alert">Товар добавлен в корзину</div>
+             })
              this.setState({
                  order: [...this.state.order, item],
              }, () => {
                  localStorage.setItem('shoppingCart', JSON.stringify(this.state.order))
              })
          }
+    }
+
+    deleteToCart = (id) => {
+        this.setState({order: this.state.order.filter(el => el.id !== id)}, () => {localStorage.setItem('shoppingCart', JSON.stringify(this.state.order))})
+    }
+
+    plusQty = (id) => {
+        this.state.order.map(el => {
+            if (el.id === id) {
+                this.setState({
+                    ...this.state.order,
+                    qty: ++el.qty
+                })
+            }
+            return el
+        })
+    }
+
+    minusQty = (id) => {
+        this.state.order.map(el => {
+            if (el.id === id) {
+                this.setState({
+                    ...this.state.order,
+                    qty: el.qty - 1 > 0  ? --el.qty : 1
+                })
+            }
+            return el
+        })
     }
 
     render() {
@@ -78,7 +104,7 @@ class App extends React.Component{
                     <Routes>
                         <Route path="/" element={<Main addToCart={this.addToCart} buttonText={this.state.buttonText} products={this.state.products} />} />
                         <Route path="contacts" element={<Contact/>} />
-                        <Route path="shopping_cart" element={<ShopCart order={this.state.order}/>} />
+                        <Route path="shopping_cart" element={<ShopCart  plusQty={this.plusQty} minusQty={this.minusQty} onDelete={this.deleteToCart}  order={this.state.order}/>} />
                     </Routes>
                 <Footer/>
             </div>

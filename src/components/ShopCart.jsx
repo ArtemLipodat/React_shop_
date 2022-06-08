@@ -1,8 +1,10 @@
+import {FaTrash} from 'react-icons/fa'
+
 function ShopCart(props) {
 
     const showOrders = (props) => {
         let total = 0;
-        props.order.forEach(el => total += Number.parseFloat(el.price))
+        props.order.forEach(el => total += Number.parseFloat(el.price) * el.qty)
         return (
             <>
                 <h2>В корзине:</h2>
@@ -11,6 +13,12 @@ function ShopCart(props) {
                         <p>{el.id}.</p>
                         <span>{el.name}</span>
                         <img src={'./img/' + el.image} alt=""/>
+                        <div className="chanche_quanity">
+                            <button type="button" className="minus" onClick={ () => {props.minusQty(el.id)} }>-</button>
+                            <input type="text" readOnly="readOnly" value={el.qty} />
+                            <button type="button" className="plus" onClick={ () => {props.plusQty(el.id)} }>+</button>
+                        </div>
+                        <FaTrash onClick={() => {props.onDelete(el.id)}} className="trash"/>
                     </div>
                 ))}
                 <label htmlFor="promo">Промокод:

@@ -1,5 +1,6 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
+@import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 @font-face {
   font-family: 'Forum';
   font-style: normal;
@@ -10,6 +11,13 @@
 * {
   margin: 0;
   padding: 0;
+}
+.loader {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 html {
   scroll-behavior: smooth;
@@ -358,6 +366,7 @@ body {
   color: #F6F6F6;
 }
 .alert a {
+  display: block;
   color: #000;
 }
 .chanche_quanity button {
@@ -388,5 +397,80 @@ body {
 }
 .trash:hover {
   transform: scale(1.2);
+}
+.modal-visible {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  animation: show_vis 1s;
+}
+.modal-visible:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.05em;
+}
+.modal-content {
+  vertical-align: middle;
+  position: relative;
+  z-index: 2;
+  min-height: 500px;
+  max-width: 500px;
+  box-sizing: border-box;
+  width: 90%;
+  background: #fff;
+  padding: 10px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  -o-box-shadow: 0 0 10px #000;
+  -ms-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+  text-align: left;
+  display: inline-block;
+  animation: show 1s;
+}
+.modal-content .close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+.modal-content .close:hover {
+  transform: scale(1.2);
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes show_vis {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=index.css.map */

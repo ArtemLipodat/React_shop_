@@ -1,5 +1,7 @@
 import Slider from "react-slick";
 import Slide from "./Slide";
+import Modal from './Modal'
+import {useState} from "react";
 
 function Main(props) {
     const settings = {
@@ -10,13 +12,15 @@ function Main(props) {
         slidesToScroll: 1
     };
 
+    const [openModal, setOpenModal] = useState(false)
+
     return(
         <main className="main">
             <section className="performance">
                 <div className="performance-title">
                     <h2>Вкусные букеты</h2>
                     <h3>для Ваших близких</h3>
-                    <button>подобрать букет</button>
+                    <button onClick={() => setOpenModal(true)}>подобрать букет</button>
                 </div>
                 <div className="performance-info">
                     <ul>
@@ -62,6 +66,7 @@ function Main(props) {
                     </Slider>
                 </div>
             </section>
+            {openModal && <Modal open={openModal} openmodal={setOpenModal}/>}
         </main>
     )
 }

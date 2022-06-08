@@ -6,10 +6,12 @@ import Contact from "./components/Contact";
 import ShopCart from "./components/ShopCart";
 import Alert from "kodobe-react-alert";
 import {Routes, Route} from "react-router-dom";
+import { Rings } from  'react-loader-spinner'
 
 class App extends React.Component{
 
     state = {
+        loading: false,
         buttonText : 'Добавить в корзину',
         products: [
                 {
@@ -97,9 +99,22 @@ class App extends React.Component{
         })
     }
 
-    render() {
+    loader = () => {
         return(
-            <div className="wrapper">
+            <div className="loader">
+                <Rings
+                    height="500"
+                    width="600"
+                    color='#7DB8C2FF'
+                    ariaLabel='loading'
+                />
+            </div>
+        )
+    }
+
+    app = () => {
+        return(
+            <>
                 <Header order={this.state.order} />
                     <Routes>
                         <Route path="/" element={<Main addToCart={this.addToCart} buttonText={this.state.buttonText} products={this.state.products} />} />
@@ -107,6 +122,14 @@ class App extends React.Component{
                         <Route path="shopping_cart" element={<ShopCart  plusQty={this.plusQty} minusQty={this.minusQty} onDelete={this.deleteToCart}  order={this.state.order}/>} />
                     </Routes>
                 <Footer/>
+            </>
+        )
+    }
+
+    render() {
+        return(
+            <div className="wrapper">
+                {this.state.loading ? this.app() : this.loader()}
             </div>
         )
     }

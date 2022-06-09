@@ -19,7 +19,7 @@ function Header(props) {
           <div className="header-menu">
               <ul>
                   <li><a href="/#products">Букеты</a></li>
-                  <li><Link to="contacts">Контакты</Link></li>
+                  {/*<li><Link to="contacts">Контакты</Link></li>*/}
                   <li style={{position: 'relative' }}><Link to="shopping_cart">Корзина</Link>{count > 0 && <span className="header-count">{count}</span>}<img src="./img/shop.png" alt="Иконка корзицы"/></li>
               </ul>
           </div>

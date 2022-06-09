@@ -82,7 +82,7 @@ function Checkout( props ) {
                     </div>
                     <span>*стомость доставки рассчитывается отдельно</span>
                     <div className="total">
-                        <span>Итого: {total}</span>
+                        <span>Итого: {total}РУБ</span>
                         <a onClick={() => validation(name, tel, delMethod)}>Продолжить ></a>
                     </div>
                 </form>

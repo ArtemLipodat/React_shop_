@@ -28,7 +28,7 @@ function CheckoutDelivery({total, delMethod, setDelivery} ) {
                    </div>
                    <a href="tel:79501573115"><FaPhone/>+7 (950) 157-31-15</a>
                    <div className="total">
-                       <span>Итого: {total} + <p className="dos">доставка (от 200 РУБ)</p></span>
+                       <span>Итого: {total}РУБ + <p className="dos">доставка (от 200 РУБ)</p></span>
                        <Link to="">Оформить заказ</Link>
                    </div>
                </form>
@@ -55,7 +55,7 @@ function CheckoutDelivery({total, delMethod, setDelivery} ) {
                   <p>Пункт самовывоза : г. Ижевск, ул. Удмуртская, 286</p>
                   <a href="tel:79501573115"><FaPhone/>+7 (950) 157-31-15</a>
                   <div className="total">
-                      <span>Итого: {total}</span>
+                      <span>Итого: {total}РУБ</span>
                       <Link to="">Оформить заказ</Link>
                   </div>
               </form>

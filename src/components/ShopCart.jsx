@@ -26,7 +26,7 @@ function ShopCart(props) {
                     <input type="text" name="promo" placeholder='СКИДКА'/>
                 </label>
                 <div className="shoppingCart-out">
-                    <span>Итого: {total}</span>
+                    <span>Итого: {total}РУБ</span>
                     <Link to="/checkout">Перейти к оформлению ></Link>
                 </div>
             </>

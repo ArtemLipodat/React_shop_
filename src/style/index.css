@@ -248,7 +248,7 @@ body {
   background-color: #B2B2B2;
 }
 .products-info-button span {
-  padding-left: 20%;
+  padding-left: 10%;
 }
 .products-info-photo {
   width: 50%;
@@ -632,6 +632,64 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+@media (min-width: 800px) and (max-width: 1200px) {
+  .header-menu {
+    flex-basis: 50%;
+  }
+  .performance-title h2 {
+    font-size: 60px;
+  }
+  .performance-title h3 {
+    font-size: 38px;
+  }
+  .performance-title button {
+    padding: 15px 50px;
+    margin-top: 20px;
+    font-size: 26px;
+  }
+  .performance-info ul li {
+    font-size: 26px;
+  }
+  .info h2 {
+    font-size: 40px;
+    margin: 0;
+  }
+  .info-text-item p {
+    font-size: 100px;
+  }
+  .info-text-item span {
+    font-size: 22px;
+  }
+  .products {
+    padding-bottom: 80px;
+  }
+  .products-category {
+    margin: 0;
+  }
+  .products-category a {
+    font-size: 36px;
+  }
+  .products-category span {
+    font-size: 36px;
+  }
+  .products-info span {
+    font-size: 24px;
+  }
+  .products-info p {
+    font-size: 16px;
+  }
+  .products-info-button button {
+    margin-top: 20px;
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+  .products-info-button span {
+    padding-left: 10%;
+  }
+  .checkout form {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=index.css.map */

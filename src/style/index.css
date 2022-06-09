@@ -342,6 +342,18 @@ body {
   height: 100vh;
   padding-top: 100px;
 }
+.checkout .back {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  color: #B2B2B2;
+  margin-top: 50px;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+.checkout .back:hover {
+  transform: scale(1.2);
+}
 .checkout-fields {
   display: flex;
   justify-content: center;
@@ -443,10 +455,12 @@ body {
   margin-top: 30px;
   width: 100%;
 }
-.checkout form .total p {
+.checkout form .total .dos {
   font-weight: 400;
   font-size: 14px;
   line-height: 15px;
+  margin: 0;
+  color: #253030;
 }
 .checkout form .total span {
   font-weight: 400;

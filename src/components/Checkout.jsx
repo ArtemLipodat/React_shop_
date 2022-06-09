@@ -86,13 +86,14 @@ function Checkout( props ) {
                         <a onClick={() => validation(name, tel, delMethod)}>Продолжить ></a>
                     </div>
                 </form>
+                <Link className="back" to="/shopping_cart">Назад</Link>
             </div>
         )
     }
 
     return(
         <>
-            {delivery ? <CheckoutDelivery delMethod={delMethod} total={total} /> : checkout()}
+            {delivery ? <CheckoutDelivery setDelivery={setdelivery} delMethod={delMethod} total={total} /> : checkout()}
         </>
     );
 

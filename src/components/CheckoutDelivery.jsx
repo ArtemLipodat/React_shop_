@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {FaPhone} from "react-icons/fa"
 
-function CheckoutDelivery({total, delMethod} ) {
+function CheckoutDelivery({total, delMethod, setDelivery} ) {
     const date = new Date()
     const delivery = () => {
        return(
@@ -28,10 +28,11 @@ function CheckoutDelivery({total, delMethod} ) {
                    </div>
                    <a href="tel:79501573115"><FaPhone/>+7 (950) 157-31-15</a>
                    <div className="total">
-                       <span>Итого: {total} + <p>доставка (от 200 РУБ)</p></span>
+                       <span>Итого: {total} + <p className="dos">доставка (от 200 РУБ)</p></span>
                        <Link to="">Оформить заказ</Link>
                    </div>
                </form>
+               <a onClick={() => setDelivery(0)} className="back">Назад</a>
            </div>
        ) 
     }
@@ -58,6 +59,7 @@ function CheckoutDelivery({total, delMethod} ) {
                       <Link to="">Оформить заказ</Link>
                   </div>
               </form>
+              <a onClick={() => setDelivery(0)} className="back">Назад</a>
           </div>
       )
     }

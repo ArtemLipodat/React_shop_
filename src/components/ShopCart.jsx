@@ -1,4 +1,5 @@
 import {FaTrash} from 'react-icons/fa'
+import {Link} from "react-router-dom";
 
 function ShopCart(props) {
 
@@ -26,7 +27,7 @@ function ShopCart(props) {
                 </label>
                 <div className="shoppingCart-out">
                     <span>Итого: {total}</span>
-                    <button>Перейти к оформлению ></button>
+                    <Link to="/checkout">Перейти к оформлению ></Link>
                 </div>
             </>
         )
@@ -38,7 +39,7 @@ function ShopCart(props) {
                 showOrders(props)
                 :
                 <div  className="shoppingCart">
-                    <h2>Ваша корзину пуста</h2>
+                    <h2>Ваша корзина пуста</h2>
                 </div>
             }
 

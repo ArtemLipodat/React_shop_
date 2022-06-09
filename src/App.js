@@ -4,6 +4,8 @@ import Footer from "./layout/Footer";
 import Main from "./components/Main";
 import Contact from "./components/Contact";
 import ShopCart from "./components/ShopCart";
+import Checkout from "./components/Checkout";
+import CheckoutDelivery from "./components/CheckoutDelivery";
 import Alert from "kodobe-react-alert";
 import {Routes, Route} from "react-router-dom";
 import { Rings } from  'react-loader-spinner'
@@ -11,7 +13,7 @@ import { Rings } from  'react-loader-spinner'
 class App extends React.Component{
 
     state = {
-        loading: false,
+        loading: true,
         buttonText : 'Добавить в корзину',
         products: [
                 {
@@ -32,6 +34,7 @@ class App extends React.Component{
                 }
             ],
         order: [],
+        checkout: []
     }
 
     componentDidMount() {
@@ -119,7 +122,9 @@ class App extends React.Component{
                     <Routes>
                         <Route path="/" element={<Main addToCart={this.addToCart} buttonText={this.state.buttonText} products={this.state.products} />} />
                         <Route path="contacts" element={<Contact/>} />
-                        <Route path="shopping_cart" element={<ShopCart  plusQty={this.plusQty} minusQty={this.minusQty} onDelete={this.deleteToCart}  order={this.state.order}/>} />
+                        <Route path="shopping_cart" element={<ShopCart plusQty={this.plusQty} minusQty={this.minusQty} onDelete={this.deleteToCart}  order={this.state.order}/>} />
+                        <Route path="checkout" element={<Checkout order={this.state.order} />} />
+                        <Route path="/checkout/continue" element={<CheckoutDelivery order={this.state.order} />} />
                     </Routes>
                 <Footer/>
             </>

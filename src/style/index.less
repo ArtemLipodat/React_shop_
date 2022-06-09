@@ -749,3 +749,107 @@ body{
     }
   }
 }
+@media (min-width: 320px) and (max-width: 500px){
+  .main{
+    padding: 0 5px;
+  }
+  .header{
+    &-logo{
+      flex-basis: 50%;
+      img{
+        width: 80px;
+      }
+    }
+    &-menu{
+      flex-basis: 50%;
+      ul{
+        li{
+          float: none;
+          a{
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+  .performance{
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    &-title{
+      display: flex;
+      flex-direction: column;
+      h2{
+        font-size: 46px;
+        text-align: center;
+      }
+      h3{
+        font-size: 36px;
+        text-align: center;
+      }
+      button{
+        margin-top: 20px;
+        padding: 10px 15px;
+        text-align: center;
+        font-size: 26px;
+      }
+    }
+    &-info{
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+      margin-top: 25px;
+      ul{
+        li{
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  .info{
+    padding-bottom: 0;
+    h2{
+      font-size: 46px;
+    }
+    &-text{
+      flex-direction: column;
+      &-item{
+        width: 100%;
+        margin-top: 50px;
+        p{
+          font-size: 100px;
+        }
+        span{
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  .products{
+    width: 100%;
+    &-category{
+      text-align: center;
+      a{
+        font-size: 30px;
+      }
+      span{
+        font-size: 30px;
+      }
+    }
+  }
+  .footer{
+    flex-direction: column;
+    height: 0;
+    padding: 0 5px;
+    &-icons{
+      img{
+        width: 30px;
+      }
+    }
+    &-company{
+      img{
+        width: 70px;
+      }
+    }
+  }
+}

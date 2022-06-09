@@ -171,6 +171,9 @@ body {
   padding-left: 10px;
   width: 70%;
 }
+.info-text-item span a {
+  color: #253030;
+}
 .slider-item {
   display: flex !important;
   align-items: center;
@@ -259,6 +262,9 @@ body {
   margin: 100px auto;
   background-color: #F6F6F6;
   padding: 25px;
+  -webkit-box-shadow: 2px 5px 22px 4px rgba(23, 203, 242, 0.18);
+  -moz-box-shadow: 2px 5px 22px 4px rgba(23, 203, 242, 0.18);
+  box-shadow: 2px 5px 22px 4px rgba(23, 203, 242, 0.18);
 }
 .shoppingCart h2 {
   font-weight: 400;
@@ -377,6 +383,9 @@ body {
   background-color: #F6F6F6;
   align-items: flex-start;
   padding: 25px;
+  -webkit-box-shadow: 2px 5px 22px 4px rgba(23, 203, 242, 0.18);
+  -moz-box-shadow: 2px 5px 22px 4px rgba(23, 203, 242, 0.18);
+  box-shadow: 2px 5px 22px 4px rgba(23, 203, 242, 0.18);
 }
 .checkout form input {
   border: 1px solid #485C5C;

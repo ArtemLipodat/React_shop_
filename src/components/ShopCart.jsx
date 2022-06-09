@@ -38,9 +38,7 @@ function ShopCart(props) {
             {props.order.length > 0 ?
                 showOrders(props)
                 :
-                <div  className="shoppingCart">
-                    <h2>Ваша корзина пуста</h2>
-                </div>
+                <h2 style={{marginBottom: 50 + 'px'}}>Ваша корзина пуста</h2>
             }
 
       </div>

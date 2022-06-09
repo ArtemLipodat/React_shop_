@@ -118,15 +118,13 @@ class App extends React.Component{
     app = () => {
         return(
             <>
-                <Header order={this.state.order} />
-                    <Routes>
-                        <Route path="/" element={<Main addToCart={this.addToCart} buttonText={this.state.buttonText} products={this.state.products} />} />
-                        <Route path="contacts" element={<Contact/>} />
-                        <Route path="shopping_cart" element={<ShopCart plusQty={this.plusQty} minusQty={this.minusQty} onDelete={this.deleteToCart}  order={this.state.order}/>} />
-                        <Route path="checkout" element={<Checkout order={this.state.order} />} />
-                        <Route path="/checkout/continue" element={<CheckoutDelivery order={this.state.order} />} />
-                    </Routes>
-                <Footer/>
+                <Routes>
+                    <Route path="/" element={<Main addToCart={this.addToCart} buttonText={this.state.buttonText} products={this.state.products} />} />
+                    <Route path="contacts" element={<Contact/>} />
+                    <Route path="shopping_cart" element={<ShopCart plusQty={this.plusQty} minusQty={this.minusQty} onDelete={this.deleteToCart}  order={this.state.order}/>} />
+                    <Route path="checkout" element={<Checkout order={this.state.order} />} />
+                    <Route path="/checkout/continue" element={<CheckoutDelivery order={this.state.order} />} />
+                </Routes>
             </>
         )
     }
@@ -134,7 +132,9 @@ class App extends React.Component{
     render() {
         return(
             <div className="wrapper">
+                <Header order={this.state.order} />
                 {this.state.loading ? this.app() : this.loader()}
+                <Footer/>
             </div>
         )
     }

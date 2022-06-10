@@ -586,7 +586,7 @@ body {
   vertical-align: middle;
   position: relative;
   z-index: 2;
-  min-height: 500px;
+  min-height: 300px;
   max-width: 500px;
   box-sizing: border-box;
   width: 90%;
@@ -694,45 +694,58 @@ body {
 }
 @media (min-width: 320px) and (max-width: 500px) {
   .main {
+    padding: 0 15px;
+  }
+  .header {
     padding: 0 5px;
   }
+  .header-count {
+    width: 12px;
+    line-height: 12px;
+    font-size: 14px;
+    left: 50px;
+    top: 15px;
+  }
   .header-logo {
-    flex-basis: 50%;
+    flex-basis: 20%;
+    margin-left: 20px;
   }
   .header-logo img {
-    width: 80px;
+    width: 50px;
   }
   .header-menu {
-    flex-basis: 50%;
+    margin-left: 25px;
+    flex-basis: 80%;
   }
-  .header-menu ul li {
-    float: none;
+  .header-menu ul li img {
+    width: 17px;
   }
   .header-menu ul li a {
-    font-size: 22px;
+    font-size: 14px;
   }
   .performance {
     flex-direction: column;
     width: 100%;
     padding: 0;
+    margin-top: 75px;
   }
   .performance-title {
     display: flex;
     flex-direction: column;
   }
   .performance-title h2 {
-    font-size: 46px;
+    font-size: 32px;
     text-align: center;
   }
   .performance-title h3 {
-    font-size: 36px;
+    font-size: 20px;
     text-align: center;
   }
   .performance-title button {
     margin-top: 20px;
-    padding: 10px 15px;
+    padding: 13px 50px;
     text-align: center;
-    font-size: 26px;
+    font-size: 16px;
   }
   .performance-info {
     display: flex;
@@ -741,26 +754,30 @@ body {
     margin-top: 25px;
   }
   .performance-info ul li {
-    font-size: 22px;
+    font-size: 16px;
+    line-height: 25px;
   }
   .info {
     padding-bottom: 0;
   }
   .info h2 {
-    font-size: 46px;
+    font-size: 20px;
+    margin-top: 75px;
+    margin-bottom: 25px;
   }
   .info-text {
     flex-direction: column;
   }
   .info-text-item {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 0px;
   }
   .info-text-item p {
-    font-size: 100px;
+    font-size: 64px;
+    line-height: 80px;
   }
   .info-text-item span {
-    font-size: 22px;
+    font-size: 14px;
   }
   .products {
     width: 100%;

@@ -55,8 +55,11 @@ function Main(props) {
             </section>
             <section id="products" className="products">
                 <div className="products-category">
-                    <a href="/">Женские букеты </a><a className="ligth" href="/">/ Мужские букеты</a>
                     <span>Варианты оформления</span>
+                    <div className="products-category-link">
+                        <a href="/">Женские букеты </a><a className="ligth" href="/">/ Мужские букеты</a>
+                    </div>
+
                 </div>
                 <div className="products-slider">
                     <Slider {...settings}>

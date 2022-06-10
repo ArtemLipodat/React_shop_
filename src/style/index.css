@@ -177,6 +177,7 @@ body {
 .slider-item {
   display: flex !important;
   align-items: center;
+  background-color: #F6F6F6;
 }
 .products {
   width: 70%;
@@ -185,6 +186,9 @@ body {
 }
 .products-category {
   margin-top: 110px;
+}
+.products-category-link {
+  margin-top: 20px;
 }
 .products-category a {
   font-weight: 400;
@@ -196,7 +200,6 @@ body {
   font-weight: 400;
   font-size: 40px;
   color: #253030;
-  margin-top: 30px;
   display: block;
 }
 .products-category .ligth {
@@ -210,7 +213,6 @@ body {
   flex-direction: column;
   min-height: 400px;
   width: 50% !important;
-  background-color: #F6F6F6;
   padding-left: 50px;
 }
 .products-info span {
@@ -757,6 +759,15 @@ body {
     font-size: 16px;
     line-height: 25px;
   }
+  .slider-item {
+    flex-direction: column;
+    background: none !important;
+    position: relative;
+    padding-top: 100px;
+  }
+  .slick-arrow {
+    display: none !important;
+  }
   .info {
     padding-bottom: 0;
   }
@@ -778,18 +789,83 @@ body {
   }
   .info-text-item span {
     font-size: 14px;
+    width: 90%;
   }
   .products {
     width: 100%;
   }
   .products-category {
     text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .products-category-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .products-category a {
-    font-size: 30px;
+    font-size: 16px;
+    margin-top: 22px;
   }
   .products-category span {
-    font-size: 30px;
+    font-size: 24px;
+    margin-top: 0;
+  }
+  .products-info {
+    order: 2;
+    width: 80% !important;
+    padding: 0 10px;
+    padding-top: 100px;
+    min-height: auto;
+    align-items: center;
+    background: #F6F6F6;
+  }
+  .products-info-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-around;
+    padding-bottom: 25px;
+    width: 100%;
+  }
+  .products-info-button span {
+    margin: 0;
+    width: auto;
+    font-size: 20px !important;
+    padding: 0;
+    padding-bottom: 15px;
+  }
+  .products-info-button button {
+    margin: 0;
+    padding: 10px 10px;
+    text-align: center;
+    order: 2;
+    font-size: 16px;
+  }
+  .products-info span {
+    margin-top: 0;
+    font-size: 14px;
+    text-align: center;
+  }
+  .products-info p {
+    font-size: 10px;
+    text-align: left;
+    padding: 0 10px;
+  }
+  .products-info-photo {
+    order: 1;
+    width: 80%;
+    background: #F6F6F6;
+    display: contents;
+  }
+  .products-info-photo img {
+    width: 70%;
+    position: absolute;
+    margin: 0;
+    top: 0;
   }
   .footer {
     flex-direction: column;
